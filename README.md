@@ -49,13 +49,6 @@ I tested it on 2,229 transactions that it had never seen before. Out of 228 frau
 * `sample_transactions.csv` → sample transactions to try the CSV upload tab
 * `requirements.txt` → Python libraries needed to run the app
 
-## Run it on your computer
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
 ## What I learned
 
 * Cleaning and understanding data
