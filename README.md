@@ -59,7 +59,7 @@ This project helped me learn about:
 * Saving and loading a trained model
 * Building a simple ML web app with Streamlit
 
-##Fraud Detection App link -
+## Fraud Detection App link -
 
 https://fraud-detection-app-durv9bpbq7ufxlmf6utwa2.streamlit.app/
 
