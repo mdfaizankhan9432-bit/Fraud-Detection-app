@@ -1,8 +1,7 @@
 # Fraud-Detection-app
 Fraud detection ML model deployed with Streamlit
-# Fraud Detection App
 
-This is a Machine Learning project that I built to detect whether a financial transaction is **Fraud** or **Not Fraud**.
+This is a Machine Learning project that I built to detect whether a financial transaction is **Fraud** or **Legitimate**.
 
 I built this project to understand how Machine Learning can be used in a real-world problem like fraud detection.
 
