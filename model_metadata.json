@@ -1,0 +1,178 @@
+{
+  "created_on": "2026-10-05 13:20",
+  "final_model": "LightGBM (default settings)",
+  "model_family": "LightGBM",
+  "tuning_used": false,
+  "tuned_params": null,
+  "selection_method": "manually chosen: LightGBM (cross-validation top was Gradient Boosting; the two are very close)",
+  "manual_model_choice": "LightGBM",
+  "cv_top_model": "Gradient Boosting",
+  "cv_f1_default": 0.990073210309823,
+  "cv_f1_tuned": 0.9906577355135594,
+  "decision_threshold": 0.5,
+  "input_columns": [
+    "step",
+    "type",
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest"
+  ],
+  "feature_columns": [
+    "step",
+    "type",
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "balance_change_orig",
+    "balance_change_dest",
+    "hour_of_day"
+  ],
+  "transaction_types": [
+    "CASH_IN",
+    "CASH_OUT",
+    "DEBIT",
+    "PAYMENT",
+    "TRANSFER"
+  ],
+  "step_range": [
+    1,
+    95
+  ],
+  "dataset": {
+    "rows": 11142,
+    "columns": 10,
+    "column_names": [
+      "step",
+      "type",
+      "amount",
+      "nameOrig",
+      "oldbalanceOrg",
+      "newbalanceOrig",
+      "nameDest",
+      "oldbalanceDest",
+      "newbalanceDest",
+      "isFraud"
+    ],
+    "fraud_percent": 10.25,
+    "type_counts": {
+      "PAYMENT": 5510,
+      "CASH_IN": 1951,
+      "CASH_OUT": 1871,
+      "TRANSFER": 1464,
+      "DEBIT": 346
+    },
+    "train_rows": 8913,
+    "test_rows": 2229
+  },
+  "cv_results": [
+    {
+      "model": "Gradient Boosting",
+      "cv_f1_mean": 0.9901154969038947,
+      "cv_f1_std": 0.003305951292171594
+    },
+    {
+      "model": "LightGBM",
+      "cv_f1_mean": 0.990073210309823,
+      "cv_f1_std": 0.003369999340633047
+    },
+    {
+      "model": "Random Forest",
+      "cv_f1_mean": 0.9900274208755462,
+      "cv_f1_std": 0.005756236658195916
+    },
+    {
+      "model": "XGBoost",
+      "cv_f1_mean": 0.9895734271759867,
+      "cv_f1_std": 0.005593649752720064
+    },
+    {
+      "model": "KNN",
+      "cv_f1_mean": 0.964983154997813,
+      "cv_f1_std": 0.00671253381506429
+    },
+    {
+      "model": "Logistic Regression",
+      "cv_f1_mean": 0.8994070343932398,
+      "cv_f1_std": 0.007755001534289397
+    }
+  ],
+  "test_results_all_models": [
+    {
+      "model": "LightGBM",
+      "precision": 1.0,
+      "recall": 0.9868421052631579,
+      "f1": 0.9933774834437086,
+      "roc_auc": 0.9998794462417915
+    },
+    {
+      "model": "XGBoost",
+      "precision": 1.0,
+      "recall": 0.9824561403508771,
+      "f1": 0.9911504424778761,
+      "roc_auc": 0.9998838300148172
+    },
+    {
+      "model": "Gradient Boosting",
+      "precision": 0.9955357142857143,
+      "recall": 0.9780701754385965,
+      "f1": 0.9867256637168141,
+      "roc_auc": 0.9990268023882796
+    },
+    {
+      "model": "Random Forest",
+      "precision": 1.0,
+      "recall": 0.9649122807017544,
+      "f1": 0.9821428571428571,
+      "roc_auc": 0.9999079407664588
+    },
+    {
+      "model": "KNN",
+      "precision": 1.0,
+      "recall": 0.9210526315789473,
+      "f1": 0.958904109589041,
+      "roc_auc": 0.9841449889090542
+    },
+    {
+      "model": "Logistic Regression",
+      "precision": 0.9045643153526971,
+      "recall": 0.956140350877193,
+      "f1": 0.929637526652452,
+      "roc_auc": 0.9910132652971759
+    }
+  ],
+  "final_test_scores": {
+    "Precision": 1.0,
+    "Recall": 0.9868421052631579,
+    "F1 Score": 0.9933774834437086,
+    "ROC-AUC": 0.9998794462417915
+  },
+  "confusion_matrix": {
+    "tn": 2001,
+    "fp": 0,
+    "fn": 3,
+    "tp": 225
+  },
+  "financial": {
+    "review_cost_per_flag": 500,
+    "total_fraud_amount": 235846526.37,
+    "fraud_stopped": 235344290.87,
+    "fraud_missed": 502235.5,
+    "investigation_cost": 112500.0,
+    "loss_without_model": 235846526.37,
+    "loss_with_model": 614735.5,
+    "net_saving": 235231790.87
+  },
+  "library_versions": {
+    "scikit-learn": "1.7.2",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "joblib": "1.5.2"
+  },
+  "python_version": "3.13.9"
+}

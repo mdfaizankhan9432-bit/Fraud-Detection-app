@@ -1,0 +1,6 @@
+streamlit
+pandas
+numpy
+joblib
+scikit-learn==1.7.2
+lightgbm==4.7.0
